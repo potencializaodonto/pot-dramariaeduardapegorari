@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Meta Ads — Dra Maria Eduarda | 3 Out – 1 Nov 2026</title>
+<title>Dashboard Meta Ads — Dra Maria Eduarda | 4 Out – 2 Nov 2026</title>
 <style>
 :root, [data-theme="dark"] {
   --bg:#0c0e18; --surface:#13161f; --surface2:#1a1e2e; --surface3:#222640;
@@ -314,7 +314,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <button class="export-btn" onclick="exportPDF()" title="Exportar PDF">&#128196; Exportar PDF</button>
         <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema"><span id="theme-icon">🌙</span></button>
       </div>
-      <div class="gen-date">Gerado em 02/11/2026 &middot; Meta Graph API v21.0 &middot; 8 dias</div>
+      <div class="gen-date">Gerado em 03/11/2026 &middot; Meta Graph API v21.0 &middot; 7 dias</div>
     </div>
   </div>
 </div>
@@ -330,6 +330,9 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <button class="filter-btn" id="filter-7d" onclick="applyFilter('last_7d')">7 dias</button>
         <button class="filter-btn" id="filter-14d" onclick="applyFilter('last_14d')">14 dias</button>
         <button class="filter-btn active" id="filter-30d" onclick="applyFilter('last_30d')">30 dias</button>
+        <button class="filter-btn" id="filter-mes" onclick="applyFilter('this_month')">Mês atual</button>
+        <button class="filter-btn" id="filter-mes-ant" onclick="applyFilter('last_month')">Mês passado</button>
+        
       </div>
     </div>
   </div>
@@ -341,22 +344,22 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="kpi-grid" style="margin-bottom:14px;">
     <div class="kpi-card">
       <div class="kpi-label">Valor investido</div>
-      <div class="kpi-value" id="kpi-val-spend" style="color:var(--accent);">R$ 113,49</div>
-      <div class="kpi-sub" id="kpi-sub-spend">~R$ 14,19/dia</div>
+      <div class="kpi-value" id="kpi-val-spend" style="color:var(--accent);">R$ 94,03</div>
+      <div class="kpi-sub" id="kpi-sub-spend">~R$ 13,43/dia</div>
     </div>
     <div class="kpi-card g">
       <div class="kpi-label">Alcance Total</div>
-      <div class="kpi-value" id="kpi-val-reach" style="color:var(--green);">2.871</div>
+      <div class="kpi-value" id="kpi-val-reach" style="color:var(--green);">2.447</div>
       <div class="kpi-sub" id="kpi-sub-reach">pessoas únicas</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Frequência</div>
-      <div class="kpi-value" id="kpi-val-freq">1.50</div>
+      <div class="kpi-value" id="kpi-val-freq">1.42</div>
       <div class="kpi-sub" id="kpi-sub-freq">média por pessoa</div>
     </div>
     <div class="kpi-card y">
       <div class="kpi-label">Impressões Totais</div>
-      <div class="kpi-value" id="kpi-val-impressions">4.299</div>
+      <div class="kpi-value" id="kpi-val-impressions">3.483</div>
       <div class="kpi-sub" id="kpi-sub-impressions">exibições</div>
     </div>
   </div>
@@ -365,22 +368,22 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="kpi-grid" style="margin-bottom:14px;">
     <div class="kpi-card">
       <div class="kpi-label">Total de cliques no link</div>
-      <div class="kpi-value" id="kpi-val-link-clicks">41</div>
-      <div class="kpi-sub" id="kpi-sub-link-clicks">85 cliques totais</div>
+      <div class="kpi-value" id="kpi-val-link-clicks">37</div>
+      <div class="kpi-sub" id="kpi-sub-link-clicks">72 cliques totais</div>
     </div>
     <div class="kpi-card g">
       <div class="kpi-label">CTR (Taxa de cliques no link)</div>
-      <div class="kpi-value" id="kpi-val-ctr" style="color:var(--green);">0,95%</div>
+      <div class="kpi-value" id="kpi-val-ctr" style="color:var(--green);">1,06%</div>
       <div class="kpi-sub" id="kpi-sub-ctr">taxa de clique</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Custo por Clique em Links</div>
-      <div class="kpi-value" id="kpi-val-cpc">R$ 2,77</div>
+      <div class="kpi-value" id="kpi-val-cpc">R$ 2,54</div>
       <div class="kpi-sub" id="kpi-sub-cpc">custo por clique</div>
     </div>
     <div class="kpi-card y">
       <div class="kpi-label">CPM médio</div>
-      <div class="kpi-value" id="kpi-val-cpm">R$ 26,40</div>
+      <div class="kpi-value" id="kpi-val-cpm">R$ 27,00</div>
       <div class="kpi-sub" id="kpi-sub-cpm">custo por mil</div>
     </div>
   </div>
@@ -389,12 +392,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="kpi-grid" style="margin-bottom:40px;">
     <div class="kpi-card blue-card">
       <div class="kpi-label">Conversas iniciadas por mensagem</div>
-      <div class="kpi-value" id="kpi-val-dms">29</div>
+      <div class="kpi-value" id="kpi-val-dms">25</div>
       <div class="kpi-sub"></div>
     </div>
     <div class="kpi-card blue-card">
       <div class="kpi-label">Conversas iniciadas por mensagem (Instagram)</div>
-      <div class="kpi-value">29</div>
+      <div class="kpi-value">25</div>
       <div class="kpi-sub"></div>
     </div>
     <div class="kpi-card blue-card">
@@ -404,7 +407,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
     </div>
     <div class="kpi-card blue-card">
       <div class="kpi-label">Custo por conversas iniciadas por mensagem</div>
-      <div class="kpi-value" id="kpi-val-cpm-conversa">R$ 3,91</div>
+      <div class="kpi-value" id="kpi-val-cpm-conversa">R$ 3,76</div>
       <div class="kpi-sub"></div>
     </div>
   </div>
@@ -418,18 +421,19 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="section-title">Alcance e Conversas por Audiência</div>
   <div id="demo-7d" style="display:none"><div class="demo-charts-row"><div class="demo-chart"><h3>Alcance por idade e Conversas iniciadas</h3><div style="color:var(--muted);padding:20px 0;text-align:center;">Sem dados disponíveis.</div></div><div class="demo-chart"><h3>Alcance por gênero e Conversas iniciadas</h3><div style="color:var(--muted);padding:20px 0;text-align:center;">Sem dados disponíveis.</div></div></div></div>
   <div id="demo-14d" style="display:none"><div class="demo-charts-row"><div class="demo-chart"><h3>Alcance por idade e Conversas iniciadas</h3><div style="color:var(--muted);padding:20px 0;text-align:center;">Sem dados disponíveis.</div></div><div class="demo-chart"><h3>Alcance por gênero e Conversas iniciadas</h3><div style="color:var(--muted);padding:20px 0;text-align:center;">Sem dados disponíveis.</div></div></div></div>
-  <div id="demo-30d"><div class="demo-charts-row"><div class="demo-chart">
+  <div id="demo-mes" style="display:none"><div class="demo-charts-row"><div class="demo-chart"><h3>Alcance por idade e Conversas iniciadas</h3><div style="color:var(--muted);padding:20px 0;text-align:center;">Sem dados disponíveis.</div></div><div class="demo-chart"><h3>Alcance por gênero e Conversas iniciadas</h3><div style="color:var(--muted);padding:20px 0;text-align:center;">Sem dados disponíveis.</div></div></div></div>
+  <div id="demo-mes-ant" style="display:none"><div class="demo-charts-row"><div class="demo-chart">
       <h3>Alcance por idade e Conversas iniciadas</h3>
       <div class="demo-bars">
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">39</div>
+              <div class="demo-val">46</div>
               <div class="demo-bar demo-reach" style="height:5px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;">1</div>
-              <div class="demo-bar demo-conv" style="height:16px;"></div>
+              <div class="demo-bar demo-conv" style="height:10px;"></div>
             </div>
           </div>
           <div class="demo-label">18-24</div>
@@ -437,12 +441,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">647</div>
-              <div class="demo-bar demo-reach" style="height:90px;"></div>
+              <div class="demo-val">791</div>
+              <div class="demo-bar demo-reach" style="height:91px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">9</div>
-              <div class="demo-bar demo-conv" style="height:144px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">12</div>
+              <div class="demo-bar demo-conv" style="height:128px;"></div>
             </div>
           </div>
           <div class="demo-label">25-34</div>
@@ -450,12 +454,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">1.148</div>
+              <div class="demo-val">1.376</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">9</div>
-              <div class="demo-bar demo-conv" style="height:144px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">11</div>
+              <div class="demo-bar demo-conv" style="height:117px;"></div>
             </div>
           </div>
           <div class="demo-label">35-44</div>
@@ -463,11 +467,11 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">959</div>
-              <div class="demo-bar demo-reach" style="height:133px;"></div>
+              <div class="demo-val">1.127</div>
+              <div class="demo-bar demo-reach" style="height:131px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">10</div>
+              <div class="demo-val" style="color:#60a5fa;">15</div>
               <div class="demo-bar demo-conv" style="height:160px;"></div>
             </div>
           </div>
@@ -476,8 +480,101 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">41</div>
+              <div class="demo-val">58</div>
+              <div class="demo-bar demo-reach" style="height:6px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">1</div>
+              <div class="demo-bar demo-conv" style="height:10px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">55-64</div>
+        </div></div>
+      <div class="demo-legend">
+        <span><i style="background:#22c55e;border-radius:2px;"></i> Alcance</span>
+        <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
+      </div>
+    </div><div class="demo-chart">
+      <h3>Alcance por gênero e Conversas iniciadas</h3>
+      <div class="demo-bars">
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">3.430</div>
+              <div class="demo-bar demo-reach" style="height:160px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">40</div>
+              <div class="demo-bar demo-conv" style="height:160px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Feminino</div>
+        </div></div>
+      <div class="demo-legend">
+        <span><i style="background:#22c55e;border-radius:2px;"></i> Alcance</span>
+        <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
+      </div>
+    </div></div></div>
+  <div id="demo-30d"><div class="demo-charts-row"><div class="demo-chart">
+      <h3>Alcance por idade e Conversas iniciadas</h3>
+      <div class="demo-bars">
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">35</div>
               <div class="demo-bar demo-reach" style="height:5px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">1</div>
+              <div class="demo-bar demo-conv" style="height:17px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">18-24</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">580</div>
+              <div class="demo-bar demo-reach" style="height:91px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">9</div>
+              <div class="demo-bar demo-conv" style="height:160px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">25-34</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">1.014</div>
+              <div class="demo-bar demo-reach" style="height:160px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">8</div>
+              <div class="demo-bar demo-conv" style="height:142px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">35-44</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">794</div>
+              <div class="demo-bar demo-reach" style="height:125px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">7</div>
+              <div class="demo-bar demo-conv" style="height:124px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">45-54</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">39</div>
+              <div class="demo-bar demo-reach" style="height:6px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;"></div>
@@ -496,11 +593,11 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">2.871</div>
+              <div class="demo-val">2.447</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">29</div>
+              <div class="demo-val" style="color:#60a5fa;">25</div>
               <div class="demo-bar demo-conv" style="height:160px;"></div>
             </div>
           </div>
@@ -525,63 +622,63 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD CLUBE Resolvi criar algo... <span class="status-badge paused">CAMPAIGN_PAUSED</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/813875757_1546626860549474_8542952961047081791_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=TdjcnuE91UwQ7kNvwH3wUKl&_nc_oc=Adq8njX_udW8-9d0HxHZNhiskSEZs4GMkSPbtJE4uQq-ZIVgemcV9pa2e9IWkQkx8fgax8K0EGIeKR2KMX17O1Sw&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=OkzEs3F-9Kcq0tleCq0NQQ&_nc_tpa=Q5bMBQIvhmQjt7moYBCXd8YAGS6mu5zM8uN_oSo4VHAiD8aIlZq1TRGrseMQxhgeyF9fJXnVqAm_pH4y9Q&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQTy-d51X81d5SeweH0VUMEECpqdU73TR4q89rtA58N_hA&oe=6AEEE0A4" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/813875757_1546626860549474_8542952961047081791_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=TdjcnuE91UwQ7kNvwE-zNlx&_nc_oc=AdoOorLIVDXUsbB2g424H2iNtsZVnnfMCEE3XIqy5dP6RoDTQteVl7zE8MT1pn0qOBj9truH4XVw569Zhmqv0Cyc&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=k5uzbq2RGYFaY-Gy6hAP2Q&_nc_tpa=Q5bMBQJzESqiVi4PYHBnGL3OWIxp0g-sG4e0kQ8mz_HEgT1qyY5q8akApKeuRGsa7SMzNs6bvqTk52dDSA&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQTROmkRBTrRbrT_rZkj1xRDGiJag2Xir1vLYFW2jt8anA&oe=6AEF8964" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"🚨 CHEGA de deixar o Botox vencer e voltar a se incomodar com as marcas!"</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/822208400976894/posts/122141415225040269" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/DdWiF2WMJyu/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 111,85</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">2.867</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">28</div><div class="cm-label" id="ad-res-label-120253788716550735">Conversas iniciadas</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,94%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 92,51</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">2.447</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">24</div><div class="cm-label" id="ad-res-label-120253788716550735">Conversas iniciadas</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">1,04%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">4.253 impressões totais</div>
+        <div class="ret-subtitle">3.445 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:12.9%;background:#6c5ce7;"></div>
+            <div class="ret-row-bar" style="width:12.8%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">548</span>
-            <span class="ret-pct">12.9%</span>
+            <span class="ret-count">440</span>
+            <span class="ret-pct">12.8%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 50%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:9.1%;background:#a855f7;"></div>
+            <div class="ret-row-bar" style="width:8.9%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">386</span>
-            <span class="ret-pct">9.1%</span>
+            <span class="ret-count">308</span>
+            <span class="ret-pct">8.9%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 75%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:5.7%;background:#f59e0b;"></div>
+            <div class="ret-row-bar" style="width:5.5%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">241</span>
-            <span class="ret-pct">5.7%</span>
+            <span class="ret-count">189</span>
+            <span class="ret-pct">5.5%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 100%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:4.0%;background:#22c55e;"></div>
+            <div class="ret-row-bar" style="width:3.8%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">168</span>
-            <span class="ret-pct">4.0%</span>
+            <span class="ret-count">131</span>
+            <span class="ret-pct">3.8%</span>
           </div>
         </div>
       </div>
@@ -592,63 +689,63 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD CLUBE Se toda vez... <span class="status-badge paused">CAMPAIGN_PAUSED</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/802777553_1094549619986562_1027504622781509062_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=BWRnQDOVFFEQ7kNvwH97Opb&_nc_oc=AdrIsPA-Gjqq0gBWF6lz0nfiDN9l7x2ORe0qiDWMj1QcHUXyW_mv8VBdV_D_Hv4SOJ4OUZXAd7Byv8MtNX5-CXhA&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=OkzEs3F-9Kcq0tleCq0NQQ&_nc_tpa=Q5bMBQIgADW_YcdUovunN_0qHpJIIKIBe0fCovA2mSWNOOLirWe1wKVLe9sl97FGNWaOyvRWYL3dUrMJug&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQQZnq46dWOJmUYZA-TW4-8dtIM9ufRpZpqWb74tjqu9jQ&oe=6AEED0C6" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/802777553_1094549619986562_1027504622781509062_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=BWRnQDOVFFEQ7kNvwHRfZ2T&_nc_oc=AdoNkZhK0bUQDhAbf4Tz7iZ5GB3Xn6s1rmpFyY5VFaPJ8sVpKw75zxYiMJI4RtMCokfQPuuZwrlmPWD5eW5rCfYG&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=k5uzbq2RGYFaY-Gy6hAP2Q&_nc_tpa=Q5bMBQJC949WBHb7VYqoHTbs8JKA0C0gkajwpYQZvDt5BGuCP1lqH3MLmp8ZwkiMmDaX7lE2L8NXV5KPVA&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQQ6J-kCSXxkRRzf6VaEIzLTZydlMPj7m9zA1Pjvhn2diw&oe=6AEFB1C6" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"😩 Cansada de perceber que o resultado passou e já ter que pensar em marcar o próximo Botox?"</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/822208400976894/posts/122140972365040269" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/DdG_Ay2MZN6/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 1,64</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">27</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 1,52</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">22</div><div class="cm-label">Alcance</div></div>
         <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">1</div><div class="cm-label" id="ad-res-label-120253698822910735">Conversas iniciadas</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">2,17%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">2,63%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">46 impressões totais</div>
+        <div class="ret-subtitle">38 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:6.5%;background:#6c5ce7;"></div>
+            <div class="ret-row-bar" style="width:7.9%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
             <span class="ret-count">3</span>
-            <span class="ret-pct">6.5%</span>
+            <span class="ret-pct">7.9%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 50%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:6.5%;background:#a855f7;"></div>
+            <div class="ret-row-bar" style="width:7.9%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
             <span class="ret-count">3</span>
-            <span class="ret-pct">6.5%</span>
+            <span class="ret-pct">7.9%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 75%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:4.3%;background:#f59e0b;"></div>
+            <div class="ret-row-bar" style="width:5.3%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
             <span class="ret-count">2</span>
-            <span class="ret-pct">4.3%</span>
+            <span class="ret-pct">5.3%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 100%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:4.3%;background:#22c55e;"></div>
+            <div class="ret-row-bar" style="width:5.3%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
             <span class="ret-count">2</span>
-            <span class="ret-pct">4.3%</span>
+            <span class="ret-pct">5.3%</span>
           </div>
         </div>
       </div>
@@ -664,8 +761,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="footer-inner">
     <div><strong>Dra Maria Eduarda</strong> &middot; Potencializa Odonto &middot; Meta Ads</div>
     <div style="text-align:right;">
-      Dados: Meta Graph API v21.0 &middot; Gerado em 02/11/2026<br>
-      3 Out – 1 Nov 2026 &middot; 8 dias &middot; 1 campanhas  
+      Dados: Meta Graph API v21.0 &middot; Gerado em 03/11/2026<br>
+      4 Out – 2 Nov 2026 &middot; 7 dias &middot; 1 campanhas  
     </div>
   </div>
 </div>
@@ -673,11 +770,13 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
 <!-- JAVASCRIPT -->
 <script>
 // ═══ DADOS EMBARCADOS PARA FILTRO INTERATIVO ═══
-const DAILY_DATA = [{"date": "2026-10-03", "spend": 19.46, "impressions": 816, "clicks": 13, "reach": 730, "link_clicks": 4, "video_views": 271, "saves": 2, "dms": 4, "leads": 0, "reactions": 11, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-04", "spend": 24.53, "impressions": 955, "clicks": 18, "reach": 828, "link_clicks": 7, "video_views": 288, "saves": 0, "dms": 4, "leads": 0, "reactions": 7, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-05", "spend": 27.67, "impressions": 970, "clicks": 26, "reach": 854, "link_clicks": 15, "video_views": 362, "saves": 1, "dms": 10, "leads": 0, "reactions": 11, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-06", "spend": 27.36, "impressions": 920, "clicks": 21, "reach": 783, "link_clicks": 11, "video_views": 310, "saves": 0, "dms": 8, "leads": 0, "reactions": 13, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-07", "spend": 14.47, "impressions": 638, "clicks": 7, "reach": 571, "link_clicks": 4, "video_views": 191, "saves": 0, "dms": 2, "leads": 0, "reactions": 5, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-08", "spend": 0.0, "impressions": 0, "clicks": 0, "reach": 0, "link_clicks": 0, "video_views": 0, "saves": 0, "dms": 1, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-10", "spend": 0.0, "impressions": 0, "clicks": 0, "reach": 0, "link_clicks": 0, "video_views": 0, "saves": 0, "dms": 0, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-11", "spend": 0.0, "impressions": 0, "clicks": 0, "reach": 0, "link_clicks": 0, "video_views": 0, "saves": 0, "dms": 0, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}];
-const ANTERIOR_ACCOUNT = {"spend": 527.43, "impressions": 15686, "clicks": 380, "reach": 5124, "ctr": 2.422542, "cpc": 1.387974, "cpm": 33.624251};
-const FULL_PERIOD = { since: '2026-10-03', until: '2026-11-01', dias: 30 };
-const CAMPS_DATA = {"last_7d": [], "last_14d": [], "last_30d": [{"campaign_name": "[POT] CLUBE BOTOX [ENG] [CBO]", "spend": 113.49, "reach": 2871, "ctr": 0.95, "cpc": 2.77, "frequency": 1.497388, "actions": [{"action_type": "page_engagement", "value": "1516", "1d_view": "1422"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "23", "1d_view": "3"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "37", "1d_view": "5"}, {"action_type": "post_engagement", "value": "1516", "1d_view": "1422"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "24", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "29", "1d_view": "1"}, {"action_type": "video_view", "value": "1422", "1d_view": "1422"}, {"action_type": "onsite_conversion.add_to_cart", "value": "1"}, {"action_type": "link_click", "value": "41"}, {"action_type": "post_reaction", "value": "47"}, {"action_type": "onsite_conversion.view_content", "value": "24"}, {"action_type": "onsite_app_view_content", "value": "24"}, {"action_type": "post_interaction_gross", "value": "53"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "24"}, {"action_type": "onsite_web_add_to_cart", "value": "1"}, {"action_type": "post_interaction_net", "value": "52"}, {"action_type": "onsite_web_app_view_content", "value": "24"}, {"action_type": "post", "value": "2"}, {"action_type": "onsite_conversion.post_unsave", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "3"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "13"}, {"action_type": "onsite_web_app_add_to_cart", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_like", "value": "47"}, {"action_type": "onsite_app_add_to_cart", "value": "1"}, {"action_type": "omni_add_to_cart", "value": "1"}, {"action_type": "omni_view_content", "value": "24"}], "objective": "OUTCOME_ENGAGEMENT"}]};
-const PERIOD_DATA = {"last_7d": {"spend": 0.0, "reach": 0, "impressions": 0, "clicks": 0, "link_clicks": 0, "ctr": 0, "cpc": 0, "cpm": 0.0, "frequency": 0.0, "dms": 0, "convs_ig": 0, "convs_fb": 0, "custo_conversa": 0, "ads": {}}, "last_14d": {"spend": 0.0, "reach": 0, "impressions": 0, "clicks": 0, "link_clicks": 0, "ctr": 0, "cpc": 0, "cpm": 0.0, "frequency": 0.0, "dms": 0, "convs_ig": 0, "convs_fb": 0, "custo_conversa": 0, "ads": {}}, "last_30d": {"spend": 113.49, "reach": 2871, "impressions": 4299, "clicks": 85, "link_clicks": 41, "ctr": 0.95, "cpc": 2.77, "cpm": 26.399163, "frequency": 1.497388, "dms": 29, "convs_ig": 29, "convs_fb": 0, "custo_conversa": 3.91, "ads": {"120253698822910735": {"spend": 1.64, "reach": 27, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253788716550735": {"spend": 111.85, "reach": 2867, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 28}}}};
+const DAILY_DATA = [{"date": "2026-10-04", "spend": 24.53, "impressions": 955, "clicks": 18, "reach": 828, "link_clicks": 7, "video_views": 288, "saves": 0, "dms": 4, "leads": 0, "reactions": 7, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-05", "spend": 27.67, "impressions": 970, "clicks": 26, "reach": 854, "link_clicks": 15, "video_views": 362, "saves": 1, "dms": 10, "leads": 0, "reactions": 11, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-06", "spend": 27.36, "impressions": 920, "clicks": 21, "reach": 783, "link_clicks": 11, "video_views": 310, "saves": 0, "dms": 8, "leads": 0, "reactions": 13, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-07", "spend": 14.47, "impressions": 638, "clicks": 7, "reach": 571, "link_clicks": 4, "video_views": 191, "saves": 0, "dms": 2, "leads": 0, "reactions": 5, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-08", "spend": 0.0, "impressions": 0, "clicks": 0, "reach": 0, "link_clicks": 0, "video_views": 0, "saves": 0, "dms": 1, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-10", "spend": 0.0, "impressions": 0, "clicks": 0, "reach": 0, "link_clicks": 0, "video_views": 0, "saves": 0, "dms": 0, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-11", "spend": 0.0, "impressions": 0, "clicks": 0, "reach": 0, "link_clicks": 0, "video_views": 0, "saves": 0, "dms": 0, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}];
+const ANTERIOR_ACCOUNT = {"spend": 546.89, "impressions": 16502, "clicks": 393, "reach": 5319, "ctr": 2.38153, "cpc": 1.391578, "cpm": 33.140831};
+const FULL_PERIOD = { since: '2026-10-04', until: '2026-11-02', dias: 30 };
+const CAMPS_DATA = {"last_7d": [], "last_14d": [], "this_month": [], "last_month": [{"campaign_name": "[POT] CLUBE BOTOX [ENG] [CBO]", "spend": 154.98, "reach": 3430, "ctr": 0.96, "cpc": 2.87, "frequency": 1.64723, "actions": [{"action_type": "page_engagement", "value": "1980", "1d_view": "1858"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "2", "1d_view": "2"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "32", "1d_view": "4"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "50", "1d_view": "7"}, {"action_type": "post_engagement", "value": "1980", "1d_view": "1858"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "32", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "40", "1d_view": "2"}, {"action_type": "video_view", "value": "1858", "1d_view": "1858"}, {"action_type": "onsite_conversion.add_to_cart", "value": "1"}, {"action_type": "link_click", "value": "54"}, {"action_type": "post_reaction", "value": "60"}, {"action_type": "onsite_conversion.view_content", "value": "32"}, {"action_type": "onsite_app_view_content", "value": "32"}, {"action_type": "post_interaction_gross", "value": "68"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "32"}, {"action_type": "onsite_web_add_to_cart", "value": "1"}, {"action_type": "post_interaction_net", "value": "67"}, {"action_type": "onsite_web_app_view_content", "value": "32"}, {"action_type": "post", "value": "4"}, {"action_type": "onsite_conversion.post_unsave", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "3"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "17"}, {"action_type": "onsite_web_app_add_to_cart", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_like", "value": "60"}, {"action_type": "onsite_app_add_to_cart", "value": "1"}, {"action_type": "omni_add_to_cart", "value": "1"}, {"action_type": "omni_view_content", "value": "32"}], "objective": "OUTCOME_ENGAGEMENT"}], "last_30d": [{"campaign_name": "[POT] CLUBE BOTOX [ENG] [CBO]", "spend": 94.03, "reach": 2447, "ctr": 1.06, "cpc": 2.54, "frequency": 1.423376, "actions": [{"action_type": "page_engagement", "value": "1227", "1d_view": "1151"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "20", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "33", "1d_view": "4"}, {"action_type": "post_engagement", "value": "1227", "1d_view": "1151"}, {"action_type": "video_view", "value": "1151", "1d_view": "1151"}, {"action_type": "onsite_conversion.add_to_cart", "value": "1"}, {"action_type": "link_click", "value": "37"}, {"action_type": "post_reaction", "value": "36"}, {"action_type": "onsite_conversion.view_content", "value": "21"}, {"action_type": "onsite_app_view_content", "value": "21"}, {"action_type": "post_interaction_gross", "value": "39"}, {"action_type": "onsite_web_view_content", "value": "21"}, {"action_type": "onsite_web_add_to_cart", "value": "1"}, {"action_type": "post_interaction_net", "value": "38"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "20"}, {"action_type": "onsite_web_app_view_content", "value": "21"}, {"action_type": "post", "value": "2"}, {"action_type": "onsite_conversion.post_unsave", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "12"}, {"action_type": "onsite_web_app_add_to_cart", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "0"}, {"action_type": "onsite_conversion.post_net_like", "value": "36"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "25"}, {"action_type": "onsite_app_add_to_cart", "value": "1"}, {"action_type": "omni_add_to_cart", "value": "1"}, {"action_type": "omni_view_content", "value": "21"}], "objective": "OUTCOME_ENGAGEMENT"}]};
+const PERIOD_DATA = {"last_7d": {"spend": 0.0, "reach": 0, "impressions": 0, "clicks": 0, "link_clicks": 0, "ctr": 0, "cpc": 0, "cpm": 0.0, "frequency": 0.0, "dms": 0, "convs_ig": 0, "convs_fb": 0, "custo_conversa": 0, "ads": {}, "dias": 7}, "last_14d": {"spend": 0.0, "reach": 0, "impressions": 0, "clicks": 0, "link_clicks": 0, "ctr": 0, "cpc": 0, "cpm": 0.0, "frequency": 0.0, "dms": 0, "convs_ig": 0, "convs_fb": 0, "custo_conversa": 0, "ads": {}, "dias": 14}, "this_month": {"spend": 0.0, "reach": 0, "impressions": 0, "clicks": 0, "link_clicks": 0, "ctr": 0, "cpc": 0, "cpm": 0.0, "frequency": 0.0, "dms": 0, "convs_ig": 0, "convs_fb": 0, "custo_conversa": 0, "ads": {}, "dias": 3}, "last_month": {"spend": 154.98, "reach": 3430, "impressions": 5650, "clicks": 117, "link_clicks": 54, "ctr": 0.96, "cpc": 2.87, "cpm": 27.430089, "frequency": 1.64723, "dms": 40, "convs_ig": 40, "convs_fb": 0, "custo_conversa": 3.87, "ads": {"120253698822910735": {"spend": 1.86, "reach": 30, "ctr": 1.75, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120253788716550735": {"spend": 153.12, "reach": 3425, "ctr": 0.95, "resultado_label": "Conversas iniciadas", "resultado_val": 38}}, "dias": 31}, "last_30d": {"spend": 94.03, "reach": 2447, "impressions": 3483, "clicks": 72, "link_clicks": 37, "ctr": 1.06, "cpc": 2.54, "cpm": 26.996842, "frequency": 1.423376, "dms": 25, "convs_ig": 25, "convs_fb": 0, "custo_conversa": 3.76, "ads": {"120253698822910735": {"spend": 1.52, "reach": 22, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253788716550735": {"spend": 92.51, "reach": 2447, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 24}}, "dias": 30}};
+const FILTER_BTNS = {"last_7d": "7d", "last_14d": "14d", "this_month": "mes", "last_month": "mes-ant", "last_30d": "30d"};
+const FILTER_LABELS = {"last_7d": "7 dias", "last_14d": "14 dias", "this_month": "Mês atual", "last_month": "Mês passado", "last_30d": "30 dias"};
 
 // ═══ HELPERS DE FORMATAÇÃO (JS) ═══
 const MESES_JS = ['','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
@@ -789,41 +888,20 @@ function applyFilter(preset) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
 
   // Atualizar botão ativo
-  const btnMap = { last_7d:'7d', last_14d:'14d', last_30d:'30d' };
-  const btn = document.getElementById('filter-' + btnMap[preset]);
+  const btn = document.getElementById('filter-' + FILTER_BTNS[preset]);
   if (btn) btn.classList.add('active');
 
   // Atualizar campanhas via JSON pré-coletado
   renderCamps(preset);
 
   // Atualizar label do título
-  const labelMap = { last_7d:'7 dias', last_14d:'14 dias', last_30d:'30 dias' };
   const el = id => document.getElementById(id);
   const kpiLabel = el('kpi-period-label');
-  if (kpiLabel) kpiLabel.innerHTML = '&middot; ' + (labelMap[preset] || '');
-
-  if (DAILY_DATA.length === 0) return;
-
-  const diasMap = { last_7d: 7, last_14d: 14, last_30d: 30 };
-  const nDias = diasMap[preset] || 30;
-  const lastDate = DAILY_DATA[DAILY_DATA.length - 1].date;
-  const lastDt = parseDate(lastDate);
-  const s = new Date(lastDt); s.setDate(s.getDate() - nDias + 1);
-  const since = s.toISOString().slice(0, 10);
-  const until = lastDate;
-
-  const filtered = filterDaily(since, until);
-  const current = sumDaily(filtered);
-
-  // Comparativo com período anterior
-  const perioDias = Math.round((parseDate(until) - parseDate(since)) / 86400000) + 1;
-  const prevUntilDt = new Date(parseDate(since)); prevUntilDt.setDate(prevUntilDt.getDate() - 1);
-  const prevSinceDt = new Date(prevUntilDt); prevSinceDt.setDate(prevSinceDt.getDate() - perioDias + 1);
-  const prevFiltered = filterDaily(prevSinceDt.toISOString().slice(0,10), prevUntilDt.toISOString().slice(0,10));
-  const deltas = prevFiltered.length > 0 ? calcDeltas(current, sumDaily(prevFiltered)) : {};
+  if (kpiLabel) kpiLabel.innerHTML = '&middot; ' + (FILTER_LABELS[preset] || '');
 
   // Atualizar KPIs usando PERIOD_DATA (dados reais da API por período)
   const pd = PERIOD_DATA[preset] || PERIOD_DATA['last_30d'];
+  const nDias = pd.dias || 30;
   const diasPorDia = nDias > 0 ? pd.spend / nDias : 0;
   el('kpi-val-spend').textContent = fmtBrl(pd.spend);
   el('kpi-sub-spend').innerHTML = '~' + fmtBrl(diasPorDia) + '/dia ';
@@ -854,18 +932,18 @@ function applyFilter(preset) {
   }
 
   // Trocar gráficos demográficos
-  ['7d','14d','30d'].forEach(p => {
+  Object.values(FILTER_BTNS).forEach(p => {
     const d = document.getElementById('demo-' + p); if (d) d.style.display = 'none';
   });
-  const demoId = 'demo-' + (btnMap[preset] || '30d');
+  const demoId = 'demo-' + (FILTER_BTNS[preset] || '30d');
   const demoEl = document.getElementById(demoId); if (demoEl) demoEl.style.display = '';
 
   // Atualizar métricas dos criativos
   const adsM = pd.ads || {};
   document.querySelectorAll('[data-ad-id]').forEach(card => {
     const adId = card.getAttribute('data-ad-id');
-    const m = adsM[adId];
-    if (!m) return;
+    // Anúncio sem veiculação no período: zera em vez de manter os números do período anterior
+    const m = adsM[adId] || { spend:0, reach:0, resultado_val:0, ctr:0 };
     const sEl = card.querySelector('[data-ad-metric="spend"]');
     const rEl = card.querySelector('[data-ad-metric="reach"]');
     const resEl = card.querySelector('[data-ad-metric="resultado"]');
@@ -875,8 +953,6 @@ function applyFilter(preset) {
     if (resEl) resEl.textContent = fmtNum(m.resultado_val);
     if (ctrEl) ctrEl.textContent = fmtPct(m.ctr);
   });
-
-  renderDailyBars(filtered);
 }
 
 // ═══ EXPORTAR PDF ═══
